@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		19A170C1FCE876714614516A /* TAPeristentStack+TAAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 19A17F4669E9685107DB5FDD /* TAPeristentStack+TAAppDelegate.m */; };
 		19A17334401E8E2E8220D80F /* TAFetchedResultControllerDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 19A1786437184E5C3BA0003D /* TAFetchedResultControllerDataSource.m */; };
+		19A1746822ACC5F407BED05D /* TAImporter.m in Sources */ = {isa = PBXBuildFile; fileRef = 19A170C1D04193990B747918 /* TAImporter.m */; };
 		19A1746E6B1D156210E0B71D /* NSManagedObject+TAManagedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 19A1701C1D96F50FE5E84F1B /* NSManagedObject+TAManagedObject.m */; };
 		19A174EB32EC75BC3FEEF66E /* TAAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 19A17CB92B71365DD99F3384 /* TAAppDelegate.m */; };
 		19A175569C931EC8BE87880A /* TASyncEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 19A179E608F56CA6A216B87A /* TASyncEngine.m */; };
@@ -16,6 +17,7 @@
 		19A176BD0EE72451B7891EF7 /* TAPeristentStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 19A17EBAF6AB22983A02032F /* TAPeristentStack.m */; };
 		19A178E9F130AE1F3341A84C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 19A17D21549F309332EE13A4 /* main.m */; };
 		19A17A121B379C0E949FD571 /* NSManagedObjectContext+TAManagedObjectContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 19A1746E3113FED25215F3E7 /* NSManagedObjectContext+TAManagedObjectContext.m */; };
+		19A17C515C2F26BA4A20293A /* TATask+TADBHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 19A1742846406CE60B6620FC /* TATask+TADBHelper.m */; };
 		19A17C60B8576B0D6D32B531 /* TAListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19A17DA686742F0DF865A044 /* TAListViewController.m */; };
 		3D0221381927DDE3004B1DD3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D0221371927DDE3004B1DD3 /* Foundation.framework */; };
 		3D02213A1927DDE3004B1DD3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D0221391927DDE3004B1DD3 /* CoreGraphics.framework */; };
@@ -49,8 +51,12 @@
 
 /* Begin PBXFileReference section */
 		19A1701C1D96F50FE5E84F1B /* NSManagedObject+TAManagedObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+TAManagedObject.m"; sourceTree = "<group>"; };
+		19A170C1D04193990B747918 /* TAImporter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAImporter.m; sourceTree = "<group>"; };
+		19A1716365E395A41CB629FE /* TAImporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAImporter.h; sourceTree = "<group>"; };
 		19A172AF0D5FCD310834F56C /* TATaskDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TATaskDataSource.m; sourceTree = "<group>"; };
 		19A17305222EE10BCB32A9B8 /* TATaskDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TATaskDataSource.h; sourceTree = "<group>"; };
+		19A1739C97467F79A48CF14D /* TATask+TADBHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TATask+TADBHelper.h"; sourceTree = "<group>"; };
+		19A1742846406CE60B6620FC /* TATask+TADBHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TATask+TADBHelper.m"; sourceTree = "<group>"; };
 		19A1746E3113FED25215F3E7 /* NSManagedObjectContext+TAManagedObjectContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObjectContext+TAManagedObjectContext.m"; sourceTree = "<group>"; };
 		19A1778D4266897DCC33A699 /* TAAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAAppDelegate.h; sourceTree = "<group>"; };
 		19A1786437184E5C3BA0003D /* TAFetchedResultControllerDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAFetchedResultControllerDataSource.m; sourceTree = "<group>"; };
@@ -165,6 +171,8 @@
 				19A17F4669E9685107DB5FDD /* TAPeristentStack+TAAppDelegate.m */,
 				19A17E7CE6AB823B7CBD4FBE /* TAPeristentStack+TAAppDelegate.h */,
 				19A17FF809055D97B3D98F3B /* Sync Engine */,
+				19A1742846406CE60B6620FC /* TATask+TADBHelper.m */,
+				19A1739C97467F79A48CF14D /* TATask+TADBHelper.h */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -202,6 +210,8 @@
 			children = (
 				19A179E608F56CA6A216B87A /* TASyncEngine.m */,
 				19A17A7B01F4A1843BA13CB7 /* TASyncEngine.h */,
+				19A170C1D04193990B747918 /* TAImporter.m */,
+				19A1716365E395A41CB629FE /* TAImporter.h */,
 			);
 			path = "Sync Engine";
 			sourceTree = "<group>";
@@ -388,6 +398,8 @@
 				19A175A59800B54D6B23859D /* TATaskDataSource.m in Sources */,
 				19A17A121B379C0E949FD571 /* NSManagedObjectContext+TAManagedObjectContext.m in Sources */,
 				19A175569C931EC8BE87880A /* TASyncEngine.m in Sources */,
+				19A1746822ACC5F407BED05D /* TAImporter.m in Sources */,
+				19A17C515C2F26BA4A20293A /* TATask+TADBHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

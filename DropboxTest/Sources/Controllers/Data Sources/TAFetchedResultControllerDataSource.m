@@ -7,6 +7,7 @@
 #import "TATask.h"
 #import "NSManagedObject+TAManagedObject.h"
 #import "NSManagedObjectContext+TAManagedObjectContext.h"
+#import "TASyncEngine.h"
 
 @interface TAFetchedResultControllerDataSource() <NSFetchedResultsControllerDelegate>
 
@@ -42,7 +43,7 @@
 - (void)addTask:(NSString *)taskName
 {
 
-    TATask *task =[[TATask alloc] initWithEntity:[NSEntityDescription entityForName:[TATask entityName] inManagedObjectContext:self.context] insertIntoManagedObjectContext:self.context];
+    TATask *task = [[TATask alloc] initWithEntity:[NSEntityDescription entityForName:[TATask entityName] inManagedObjectContext:self.context] insertIntoManagedObjectContext:self.context];
     task.name = taskName;
     [self.context saveContext];
 
@@ -79,7 +80,7 @@
     if(editingStyle == UITableViewCellEditingStyleDelete)
     {
         TATask *task = [self.fetchedResultsController objectAtIndexPath:indexPath];
-        task.deleted = @YES;
+        task.deleted = YES;
         [self.context saveContext];
     }
 }
@@ -130,8 +131,12 @@
 {
     _fetchedResultsController = fetchedResultsController;
     _fetchedResultsController.delegate = self;
+
+    [[TASyncEngine sharedEngine] triggerSync];
+
     NSError *error;
     [_fetchedResultsController performFetch:&error];
+
     if(error)
     {
         NSLog(@"%@", error);

@@ -8,11 +8,13 @@
 #import "TAPeristentStack+TAAppDelegate.h"
 #import "TATask.h"
 #import "NSManagedObjectContext+TAManagedObjectContext.h"
+#import "TAImporter.h"
 
 @interface TASyncEngine ()
 
 @property(nonatomic, strong) DBDatastore *store;
-@property (nonatomic, strong) NSManagedObjectContext *backgroundContext;
+@property(nonatomic, strong) NSManagedObjectContext *backgroundContext;
+@property(nonatomic, strong, readwrite) TAImporter *importer;
 @end
 
 @implementation TASyncEngine
@@ -39,18 +41,37 @@
         DBAccount *account = [[DBAccountManager sharedManager] linkedAccount];
         NSAssert(account, @"Dropbox must be configured at this point");
         self.store = [DBDatastore openDefaultStoreForAccount:account error:nil];
+
+        self.importer = [[TAImporter alloc] initWithManagedObjectContext:self.backgroundContext];
+
+        __weak typeof (self) weakSelf = self;
+        [self.store addObserver:self block:^() {
+            if ( weakSelf.store.status & DBDatastoreIncoming )
+            {
+                NSDictionary *changes = [weakSelf.store sync:nil];
+                // Handle the updated data
+                [weakSelf.importer importDBRecords:changes[@"tasks"]];
+            }
+        }];
     }
 
     return self;
 }
 
--(void) startEngine
+- (void)startEngine
 {
 
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(handleDataModelChange:)
                                                  name:NSManagedObjectContextObjectsDidChangeNotification
                                                object:[TAPeristentStack appPersistentStack].mainContext];
+}
+
+- (void)triggerSync
+{
+    DBTable *table = [self.store getTable:@"tasks"];
+    NSArray *tasks = [table query:nil error:nil];
+    [self.importer importDBRecords:tasks];
 }
 
 #pragma mark - Private
@@ -69,41 +90,37 @@
 
 - (void)addObjects:(NSSet *)objects
 {
-    if(!objects)
+    if ( !objects )
     {
         return;
     }
     DBTable *table = [self.store getTable:@"tasks"];
     [objects enumerateObjectsUsingBlock:^(TATask *task, BOOL *stop) {
-        DBRecord *record = [table insert:@{@"taskname" : task.name, @"completed" : task.completed ? @YES : @NO }];
-
-        task.uid = record.recordId;
-
+        // if uid already set, we do not insert
+        if ( !task.uid )
+        {
+            DBRecord *record = [table insert:@{@"taskname" : task.name, @"completed" : task.completed ? @YES : @NO}];
+            task.uid = record.recordId;
+        }
     }];
 
     [[TAPeristentStack appPersistentStack].mainContext saveContext];
     [self syncWithBackend];
 }
 
--(void) updateObjects:(NSSet *) objects
+- (void)updateObjects:(NSSet *)objects
 {
-    if(!objects)
-    {
-        return;
-    }
-
     NSMutableSet *objectsForDeletion = [NSMutableSet set];
     DBTable *table = [self.store getTable:@"tasks"];
     [objects enumerateObjectsUsingBlock:^(TATask *task, BOOL *stop) {
 
-        if(task.deleted)
+        if ( task.deleted )
         {
             [objectsForDeletion addObject:task];
-
         }
         else
         {
-            NSArray *tasks = [table query:@{@"id" : task.uid } error:nil];
+            NSArray *tasks = [table query:@{@"id" : task.uid} error:nil];
             DBRecord *record = [tasks firstObject];
             record[@"taskname"] = task.name;
         }
@@ -113,28 +130,24 @@
     [self syncWithBackend];
 }
 
-
--(void) deleteObjects:(NSSet *) objects
+- (void)deleteObjects:(NSSet *)objects
 {
-    if(!objects)
+    if ( !objects )
     {
         return;
     }
     DBTable *table = [self.store getTable:@"tasks"];
 
-
     NSMutableArray *coreDataIds = [NSMutableArray array];
 
     [objects enumerateObjectsUsingBlock:^(TATask *task, BOOL *stop) {
         [coreDataIds addObject:task.objectID];
-        NSArray *tasks = [table query:@{@"id" : task.uid } error:nil];
-        DBRecord *record = [tasks firstObject];
+
+        DBRecord *record = [table getRecord:task.uid error:nil];
         [record deleteRecord];
 
         // delete from core data as well
     }];
-
-
 
     [self.backgroundContext performBlock:^{
         [coreDataIds enumerateObjectsUsingBlock:^(NSManagedObjectID *objId, NSUInteger idx, BOOL *stop) {
@@ -144,18 +157,15 @@
 
         [self.backgroundContext saveContext];
     }];
-
-
 }
 
 - (void)syncWithBackend
 {
     DBError *error;
     [self.store sync:&error];
-    if(error)
+    if ( error )
     {
         NSLog(@"sync error: %@", error);
-
     }
 }
 

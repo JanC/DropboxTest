@@ -45,34 +45,35 @@
 //                                                 name:NSManagedObjectContextObjectsDidChangeNotification
 //                                               object:self.mainContext];
 
-    self.backgroundContext = [self createManagedContextWithConcurrencyType:NSPrivateQueueConcurrencyType];
+    self.backgroundContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSPrivateQueueConcurrencyType];
+    self.backgroundContext.parentContext = self.mainContext;
 
 
     //
     // merge changes from background context to main one
     //
 
-
-    [[NSNotificationCenter defaultCenter] addObserverForName:NSManagedObjectContextDidSaveNotification
-                                                      object:nil
-                                                       queue:nil usingBlock:^(NSNotification *note) {
-        // merge from background to main
-
-        if ( note.object != self.mainContext )
-        {
-            [self.mainContext performBlock:^{
-                [self.mainContext mergeChangesFromContextDidSaveNotification:note];
-            }];
-        }
-
-        // merge from main to background
-        if ( note.object != self.backgroundContext )
-        {
-            [self.backgroundContext performBlock:^{
-                [self.backgroundContext mergeChangesFromContextDidSaveNotification:note];
-            }];
-        }
-    }];
+//
+//    [[NSNotificationCenter defaultCenter] addObserverForName:NSManagedObjectContextDidSaveNotification
+//                                                      object:nil
+//                                                       queue:nil usingBlock:^(NSNotification *note) {
+//        // merge from background to main
+//
+//        if ( note.object != self.mainContext )
+//        {
+//            [self.mainContext performBlock:^{
+//                [self.mainContext mergeChangesFromContextDidSaveNotification:note];
+//            }];
+//        }
+//
+//        // merge from main to background
+//        if ( note.object != self.backgroundContext )
+//        {
+//            [self.backgroundContext performBlock:^{
+//                [self.backgroundContext mergeChangesFromContextDidSaveNotification:note];
+//            }];
+//        }
+//    }];
 }
 
 - (NSManagedObjectContext *)createManagedContextWithConcurrencyType:(NSManagedObjectContextConcurrencyType)type

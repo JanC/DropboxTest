@@ -53,12 +53,13 @@ NSString *const TATAListViewControllerCellId = @"TATAListViewControllerCellId";
                                                                   configureCellBlock:^(UITableViewCell *cell, id model) {
                                                                       TATask *task = model;
                                                                       cell.textLabel.text = task.name;
+                                                                      cell.textLabel.textColor = task.deleted ? [UIColor grayColor] : [UIColor blackColor];
                                                                   }];
 
     self.tableView.dataSource = self.dataSource;
 
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:[TATask entityName]];
-    fetchRequest.predicate = [NSPredicate predicateWithFormat:@"deleted = NO"];
+    //fetchRequest.predicate = [NSPredicate predicateWithFormat:@"deleted = NO"];
     fetchRequest.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES]];
     NSFetchedResultsController *fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest
                                                                                                managedObjectContext:self.context

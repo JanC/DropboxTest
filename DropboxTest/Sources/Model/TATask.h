@@ -13,8 +13,8 @@
 @interface TATask : NSManagedObject
 
 @property (nonatomic, retain) NSString * name;
-@property (nonatomic, retain) NSNumber * completed;
+@property (nonatomic, assign) BOOL completed;
 @property (nonatomic, retain) NSString * uid;
-@property (nonatomic, retain) NSNumber * deleted;
+@property (nonatomic, assign) BOOL deleted;
 
 @end

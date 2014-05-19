@@ -11,4 +11,9 @@
 
 -(void) startEngine;
 
+/**
+* Triggers loading sync that populates incoming data to local core data
+*/
+-(void) triggerSync;
+
 @end

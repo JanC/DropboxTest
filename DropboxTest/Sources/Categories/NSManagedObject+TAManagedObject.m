@@ -7,6 +7,9 @@
 
 @implementation NSManagedObject (TAManagedObject)
 
+
+
+
 +(NSString *) entityName
 {
     return NSStringFromClass([self class]);
