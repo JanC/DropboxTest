@@ -1,0 +1,622 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		19A170C1FCE876714614516A /* TAPeristentStack+TAAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 19A17F4669E9685107DB5FDD /* TAPeristentStack+TAAppDelegate.m */; };
+		19A17334401E8E2E8220D80F /* TAFetchedResultControllerDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 19A1786437184E5C3BA0003D /* TAFetchedResultControllerDataSource.m */; };
+		19A1746E6B1D156210E0B71D /* NSManagedObject+TAManagedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 19A1701C1D96F50FE5E84F1B /* NSManagedObject+TAManagedObject.m */; };
+		19A174EB32EC75BC3FEEF66E /* TAAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 19A17CB92B71365DD99F3384 /* TAAppDelegate.m */; };
+		19A175569C931EC8BE87880A /* TASyncEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 19A179E608F56CA6A216B87A /* TASyncEngine.m */; };
+		19A175A59800B54D6B23859D /* TATaskDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 19A172AF0D5FCD310834F56C /* TATaskDataSource.m */; };
+		19A176BD0EE72451B7891EF7 /* TAPeristentStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 19A17EBAF6AB22983A02032F /* TAPeristentStack.m */; };
+		19A178E9F130AE1F3341A84C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 19A17D21549F309332EE13A4 /* main.m */; };
+		19A17A121B379C0E949FD571 /* NSManagedObjectContext+TAManagedObjectContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 19A1746E3113FED25215F3E7 /* NSManagedObjectContext+TAManagedObjectContext.m */; };
+		19A17C60B8576B0D6D32B531 /* TAListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19A17DA686742F0DF865A044 /* TAListViewController.m */; };
+		3D0221381927DDE3004B1DD3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D0221371927DDE3004B1DD3 /* Foundation.framework */; };
+		3D02213A1927DDE3004B1DD3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D0221391927DDE3004B1DD3 /* CoreGraphics.framework */; };
+		3D02213C1927DDE3004B1DD3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D02213B1927DDE3004B1DD3 /* UIKit.framework */; };
+		3D0221421927DDE3004B1DD3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3D0221401927DDE3004B1DD3 /* InfoPlist.strings */; };
+		3D02214A1927DDE3004B1DD3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D0221491927DDE3004B1DD3 /* Images.xcassets */; };
+		3D0221511927DDE3004B1DD3 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D0221501927DDE3004B1DD3 /* XCTest.framework */; };
+		3D0221521927DDE3004B1DD3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D0221371927DDE3004B1DD3 /* Foundation.framework */; };
+		3D0221531927DDE3004B1DD3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D02213B1927DDE3004B1DD3 /* UIKit.framework */; };
+		3D02215B1927DDE3004B1DD3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3D0221591927DDE3004B1DD3 /* InfoPlist.strings */; };
+		3D02215D1927DDE3004B1DD3 /* DropboxTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D02215C1927DDE3004B1DD3 /* DropboxTestTests.m */; };
+		3D0221671927E018004B1DD3 /* Dropbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D0221661927E018004B1DD3 /* Dropbox.framework */; };
+		3D0221691927E30B004B1DD3 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D0221681927E30B004B1DD3 /* Security.framework */; };
+		3D02216B1927E3AD004B1DD3 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D02216A1927E3AD004B1DD3 /* SystemConfiguration.framework */; };
+		3D02216D1927E4CF004B1DD3 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D02216C1927E4CF004B1DD3 /* CFNetwork.framework */; };
+		3D02216F1927E4D9004B1DD3 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D02216E1927E4D9004B1DD3 /* QuartzCore.framework */; };
+		3D0221711927E4E4004B1DD3 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D0221701927E4E4004B1DD3 /* libc++.dylib */; };
+		3D2AB09C1928B85E00F8F910 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3D2AB09A1928B85E00F8F910 /* Model.xcdatamodeld */; };
+		3D2AB0A5192922E400F8F910 /* TATask.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2AB0A4192922E400F8F910 /* TATask.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3D0221541927DDE3004B1DD3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3D02212C1927DDE3004B1DD3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3D0221331927DDE3004B1DD3;
+			remoteInfo = DropboxTest;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		19A1701C1D96F50FE5E84F1B /* NSManagedObject+TAManagedObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+TAManagedObject.m"; sourceTree = "<group>"; };
+		19A172AF0D5FCD310834F56C /* TATaskDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TATaskDataSource.m; sourceTree = "<group>"; };
+		19A17305222EE10BCB32A9B8 /* TATaskDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TATaskDataSource.h; sourceTree = "<group>"; };
+		19A1746E3113FED25215F3E7 /* NSManagedObjectContext+TAManagedObjectContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObjectContext+TAManagedObjectContext.m"; sourceTree = "<group>"; };
+		19A1778D4266897DCC33A699 /* TAAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAAppDelegate.h; sourceTree = "<group>"; };
+		19A1786437184E5C3BA0003D /* TAFetchedResultControllerDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAFetchedResultControllerDataSource.m; sourceTree = "<group>"; };
+		19A178B6B081656A1AEE2F59 /* TAFetchedResultControllerDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAFetchedResultControllerDataSource.h; sourceTree = "<group>"; };
+		19A1792041946E28ECBAA608 /* TAListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAListViewController.h; sourceTree = "<group>"; };
+		19A179850CF8B605E05B5693 /* TAPeristentStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAPeristentStack.h; sourceTree = "<group>"; };
+		19A179BACDCE7013EC227C5D /* NSManagedObject+TAManagedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObject+TAManagedObject.h"; sourceTree = "<group>"; };
+		19A179E608F56CA6A216B87A /* TASyncEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TASyncEngine.m; sourceTree = "<group>"; };
+		19A17A7B01F4A1843BA13CB7 /* TASyncEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TASyncEngine.h; sourceTree = "<group>"; };
+		19A17CB92B71365DD99F3384 /* TAAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAAppDelegate.m; sourceTree = "<group>"; };
+		19A17D21549F309332EE13A4 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		19A17D30190916B1D9049B8B /* NSManagedObjectContext+TAManagedObjectContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObjectContext+TAManagedObjectContext.h"; sourceTree = "<group>"; };
+		19A17DA686742F0DF865A044 /* TAListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAListViewController.m; sourceTree = "<group>"; };
+		19A17E7CE6AB823B7CBD4FBE /* TAPeristentStack+TAAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TAPeristentStack+TAAppDelegate.h"; sourceTree = "<group>"; };
+		19A17EBAF6AB22983A02032F /* TAPeristentStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAPeristentStack.m; sourceTree = "<group>"; };
+		19A17F4669E9685107DB5FDD /* TAPeristentStack+TAAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TAPeristentStack+TAAppDelegate.m"; sourceTree = "<group>"; };
+		3D0221341927DDE3004B1DD3 /* DropboxTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DropboxTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D0221371927DDE3004B1DD3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3D0221391927DDE3004B1DD3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		3D02213B1927DDE3004B1DD3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		3D02213F1927DDE3004B1DD3 /* DropboxTest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DropboxTest-Info.plist"; sourceTree = "<group>"; };
+		3D0221411927DDE3004B1DD3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3D0221451927DDE3004B1DD3 /* DropboxTest-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DropboxTest-Prefix.pch"; sourceTree = "<group>"; };
+		3D0221491927DDE3004B1DD3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		3D02214F1927DDE3004B1DD3 /* DropboxTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DropboxTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D0221501927DDE3004B1DD3 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		3D0221581927DDE3004B1DD3 /* DropboxTestTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DropboxTestTests-Info.plist"; sourceTree = "<group>"; };
+		3D02215A1927DDE3004B1DD3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3D02215C1927DDE3004B1DD3 /* DropboxTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DropboxTestTests.m; sourceTree = "<group>"; };
+		3D0221661927E018004B1DD3 /* Dropbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Dropbox.framework; sourceTree = "<group>"; };
+		3D0221681927E30B004B1DD3 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		3D02216A1927E3AD004B1DD3 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		3D02216C1927E4CF004B1DD3 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		3D02216E1927E4D9004B1DD3 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		3D0221701927E4E4004B1DD3 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		3D2AB09B1928B85E00F8F910 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		3D2AB0A3192922E400F8F910 /* TATask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TATask.h; sourceTree = "<group>"; };
+		3D2AB0A4192922E400F8F910 /* TATask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TATask.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3D0221311927DDE3004B1DD3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D0221711927E4E4004B1DD3 /* libc++.dylib in Frameworks */,
+				3D02216F1927E4D9004B1DD3 /* QuartzCore.framework in Frameworks */,
+				3D02216D1927E4CF004B1DD3 /* CFNetwork.framework in Frameworks */,
+				3D02216B1927E3AD004B1DD3 /* SystemConfiguration.framework in Frameworks */,
+				3D0221691927E30B004B1DD3 /* Security.framework in Frameworks */,
+				3D02213A1927DDE3004B1DD3 /* CoreGraphics.framework in Frameworks */,
+				3D02213C1927DDE3004B1DD3 /* UIKit.framework in Frameworks */,
+				3D0221381927DDE3004B1DD3 /* Foundation.framework in Frameworks */,
+				3D0221671927E018004B1DD3 /* Dropbox.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D02214C1927DDE3004B1DD3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D0221511927DDE3004B1DD3 /* XCTest.framework in Frameworks */,
+				3D0221531927DDE3004B1DD3 /* UIKit.framework in Frameworks */,
+				3D0221521927DDE3004B1DD3 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		19A171D6D384618A71DBCEE1 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				19A17F51FEAFA1C53F205A2B /* Application */,
+				19A17BE1DD92BB0060D58A97 /* Categories */,
+				19A1779E6263C31AA088247B /* Controllers */,
+				19A17A89CAD0F9A5E5D30DB8 /* Model */,
+				19A17B76F4C00696019545AD /* Views */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		19A17625150BF0C03980E365 /* Data Sources */ = {
+			isa = PBXGroup;
+			children = (
+				19A1786437184E5C3BA0003D /* TAFetchedResultControllerDataSource.m */,
+				19A17305222EE10BCB32A9B8 /* TATaskDataSource.h */,
+				19A178B6B081656A1AEE2F59 /* TAFetchedResultControllerDataSource.h */,
+				19A172AF0D5FCD310834F56C /* TATaskDataSource.m */,
+			);
+			path = "Data Sources";
+			sourceTree = "<group>";
+		};
+		19A1779E6263C31AA088247B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				19A17DA686742F0DF865A044 /* TAListViewController.m */,
+				19A1792041946E28ECBAA608 /* TAListViewController.h */,
+				19A17625150BF0C03980E365 /* Data Sources */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		19A17A89CAD0F9A5E5D30DB8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3D2AB09A1928B85E00F8F910 /* Model.xcdatamodeld */,
+				3D2AB0A3192922E400F8F910 /* TATask.h */,
+				3D2AB0A4192922E400F8F910 /* TATask.m */,
+				19A17EBAF6AB22983A02032F /* TAPeristentStack.m */,
+				19A179850CF8B605E05B5693 /* TAPeristentStack.h */,
+				19A17F4669E9685107DB5FDD /* TAPeristentStack+TAAppDelegate.m */,
+				19A17E7CE6AB823B7CBD4FBE /* TAPeristentStack+TAAppDelegate.h */,
+				19A17FF809055D97B3D98F3B /* Sync Engine */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		19A17B76F4C00696019545AD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		19A17BE1DD92BB0060D58A97 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				19A1701C1D96F50FE5E84F1B /* NSManagedObject+TAManagedObject.m */,
+				19A179BACDCE7013EC227C5D /* NSManagedObject+TAManagedObject.h */,
+				19A1746E3113FED25215F3E7 /* NSManagedObjectContext+TAManagedObjectContext.m */,
+				19A17D30190916B1D9049B8B /* NSManagedObjectContext+TAManagedObjectContext.h */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		19A17F51FEAFA1C53F205A2B /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				19A1778D4266897DCC33A699 /* TAAppDelegate.h */,
+				19A17CB92B71365DD99F3384 /* TAAppDelegate.m */,
+				19A17D21549F309332EE13A4 /* main.m */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		19A17FF809055D97B3D98F3B /* Sync Engine */ = {
+			isa = PBXGroup;
+			children = (
+				19A179E608F56CA6A216B87A /* TASyncEngine.m */,
+				19A17A7B01F4A1843BA13CB7 /* TASyncEngine.h */,
+			);
+			path = "Sync Engine";
+			sourceTree = "<group>";
+		};
+		3D02212B1927DDE3004B1DD3 = {
+			isa = PBXGroup;
+			children = (
+				3D02213D1927DDE3004B1DD3 /* DropboxTest */,
+				3D0221561927DDE3004B1DD3 /* DropboxTestTests */,
+				3D0221361927DDE3004B1DD3 /* Frameworks */,
+				3D0221351927DDE3004B1DD3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3D0221351927DDE3004B1DD3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3D0221341927DDE3004B1DD3 /* DropboxTest.app */,
+				3D02214F1927DDE3004B1DD3 /* DropboxTestTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3D0221361927DDE3004B1DD3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3D0221701927E4E4004B1DD3 /* libc++.dylib */,
+				3D02216E1927E4D9004B1DD3 /* QuartzCore.framework */,
+				3D02216C1927E4CF004B1DD3 /* CFNetwork.framework */,
+				3D02216A1927E3AD004B1DD3 /* SystemConfiguration.framework */,
+				3D0221681927E30B004B1DD3 /* Security.framework */,
+				3D0221661927E018004B1DD3 /* Dropbox.framework */,
+				3D0221371927DDE3004B1DD3 /* Foundation.framework */,
+				3D0221391927DDE3004B1DD3 /* CoreGraphics.framework */,
+				3D02213B1927DDE3004B1DD3 /* UIKit.framework */,
+				3D0221501927DDE3004B1DD3 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3D02213D1927DDE3004B1DD3 /* DropboxTest */ = {
+			isa = PBXGroup;
+			children = (
+				3D0221491927DDE3004B1DD3 /* Images.xcassets */,
+				19A171D6D384618A71DBCEE1 /* Sources */,
+				3D02213E1927DDE3004B1DD3 /* Supporting Files */,
+			);
+			path = DropboxTest;
+			sourceTree = "<group>";
+		};
+		3D02213E1927DDE3004B1DD3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3D02213F1927DDE3004B1DD3 /* DropboxTest-Info.plist */,
+				3D0221401927DDE3004B1DD3 /* InfoPlist.strings */,
+				3D0221451927DDE3004B1DD3 /* DropboxTest-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3D0221561927DDE3004B1DD3 /* DropboxTestTests */ = {
+			isa = PBXGroup;
+			children = (
+				3D02215C1927DDE3004B1DD3 /* DropboxTestTests.m */,
+				3D0221571927DDE3004B1DD3 /* Supporting Files */,
+			);
+			path = DropboxTestTests;
+			sourceTree = "<group>";
+		};
+		3D0221571927DDE3004B1DD3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3D0221581927DDE3004B1DD3 /* DropboxTestTests-Info.plist */,
+				3D0221591927DDE3004B1DD3 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3D0221331927DDE3004B1DD3 /* DropboxTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3D0221601927DDE3004B1DD3 /* Build configuration list for PBXNativeTarget "DropboxTest" */;
+			buildPhases = (
+				3D0221301927DDE3004B1DD3 /* Sources */,
+				3D0221311927DDE3004B1DD3 /* Frameworks */,
+				3D0221321927DDE3004B1DD3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DropboxTest;
+			productName = DropboxTest;
+			productReference = 3D0221341927DDE3004B1DD3 /* DropboxTest.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3D02214E1927DDE3004B1DD3 /* DropboxTestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3D0221631927DDE3004B1DD3 /* Build configuration list for PBXNativeTarget "DropboxTestTests" */;
+			buildPhases = (
+				3D02214B1927DDE3004B1DD3 /* Sources */,
+				3D02214C1927DDE3004B1DD3 /* Frameworks */,
+				3D02214D1927DDE3004B1DD3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3D0221551927DDE3004B1DD3 /* PBXTargetDependency */,
+			);
+			name = DropboxTestTests;
+			productName = DropboxTestTests;
+			productReference = 3D02214F1927DDE3004B1DD3 /* DropboxTestTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3D02212C1927DDE3004B1DD3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = TA;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Tequila Apps";
+				TargetAttributes = {
+					3D02214E1927DDE3004B1DD3 = {
+						TestTargetID = 3D0221331927DDE3004B1DD3;
+					};
+				};
+			};
+			buildConfigurationList = 3D02212F1927DDE3004B1DD3 /* Build configuration list for PBXProject "DropboxTest" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 3D02212B1927DDE3004B1DD3;
+			productRefGroup = 3D0221351927DDE3004B1DD3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3D0221331927DDE3004B1DD3 /* DropboxTest */,
+				3D02214E1927DDE3004B1DD3 /* DropboxTestTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3D0221321927DDE3004B1DD3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D0221421927DDE3004B1DD3 /* InfoPlist.strings in Resources */,
+				3D02214A1927DDE3004B1DD3 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D02214D1927DDE3004B1DD3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D02215B1927DDE3004B1DD3 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3D0221301927DDE3004B1DD3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19A174EB32EC75BC3FEEF66E /* TAAppDelegate.m in Sources */,
+				19A178E9F130AE1F3341A84C /* main.m in Sources */,
+				3D2AB09C1928B85E00F8F910 /* Model.xcdatamodeld in Sources */,
+				19A17C60B8576B0D6D32B531 /* TAListViewController.m in Sources */,
+				19A1746E6B1D156210E0B71D /* NSManagedObject+TAManagedObject.m in Sources */,
+				19A176BD0EE72451B7891EF7 /* TAPeristentStack.m in Sources */,
+				19A170C1FCE876714614516A /* TAPeristentStack+TAAppDelegate.m in Sources */,
+				3D2AB0A5192922E400F8F910 /* TATask.m in Sources */,
+				19A17334401E8E2E8220D80F /* TAFetchedResultControllerDataSource.m in Sources */,
+				19A175A59800B54D6B23859D /* TATaskDataSource.m in Sources */,
+				19A17A121B379C0E949FD571 /* NSManagedObjectContext+TAManagedObjectContext.m in Sources */,
+				19A175569C931EC8BE87880A /* TASyncEngine.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D02214B1927DDE3004B1DD3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D02215D1927DDE3004B1DD3 /* DropboxTestTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3D0221551927DDE3004B1DD3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3D0221331927DDE3004B1DD3 /* DropboxTest */;
+			targetProxy = 3D0221541927DDE3004B1DD3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3D0221401927DDE3004B1DD3 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3D0221411927DDE3004B1DD3 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		3D0221591927DDE3004B1DD3 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3D02215A1927DDE3004B1DD3 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3D02215E1927DDE3004B1DD3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		3D02215F1927DDE3004B1DD3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3D0221611927DDE3004B1DD3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DropboxTest/DropboxTest-Prefix.pch";
+				INFOPLIST_FILE = "DropboxTest/DropboxTest-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		3D0221621927DDE3004B1DD3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DropboxTest/DropboxTest-Prefix.pch";
+				INFOPLIST_FILE = "DropboxTest/DropboxTest-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		3D0221641927DDE3004B1DD3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DropboxTest.app/DropboxTest";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DropboxTest/DropboxTest-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "DropboxTestTests/DropboxTestTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		3D0221651927DDE3004B1DD3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DropboxTest.app/DropboxTest";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DropboxTest/DropboxTest-Prefix.pch";
+				INFOPLIST_FILE = "DropboxTestTests/DropboxTestTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3D02212F1927DDE3004B1DD3 /* Build configuration list for PBXProject "DropboxTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D02215E1927DDE3004B1DD3 /* Debug */,
+				3D02215F1927DDE3004B1DD3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3D0221601927DDE3004B1DD3 /* Build configuration list for PBXNativeTarget "DropboxTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D0221611927DDE3004B1DD3 /* Debug */,
+				3D0221621927DDE3004B1DD3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3D0221631927DDE3004B1DD3 /* Build configuration list for PBXNativeTarget "DropboxTestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D0221641927DDE3004B1DD3 /* Debug */,
+				3D0221651927DDE3004B1DD3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		3D2AB09A1928B85E00F8F910 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				3D2AB09B1928B85E00F8F910 /* Model.xcdatamodel */,
+			);
+			currentVersion = 3D2AB09B1928B85E00F8F910 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 3D02212C1927DDE3004B1DD3 /* Project object */;
+}
