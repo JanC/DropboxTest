@@ -120,9 +120,10 @@
         }
         else
         {
-            NSArray *tasks = [table query:@{@"id" : task.uid} error:nil];
-            DBRecord *record = [tasks firstObject];
+
+            DBRecord *record = [table getRecord:task.uid error:nil];
             record[@"taskname"] = task.name;
+            record[@"completed"] = @(task.completed);
         }
     }];
 

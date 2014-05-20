@@ -49,6 +49,11 @@
 
 }
 
+-(id) objectAtIndexPath:(NSIndexPath *) indexPath
+{
+    return [self.fetchedResultsController objectAtIndexPath:indexPath];
+}
+
 
 #pragma mark
 #pragma mark - Protocols

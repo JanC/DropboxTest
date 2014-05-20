@@ -18,4 +18,6 @@
 
 -(void) addTask:(NSString *) taskName;
 
+-(id) objectAtIndexPath:(NSIndexPath *) indexPath;
+
 @end

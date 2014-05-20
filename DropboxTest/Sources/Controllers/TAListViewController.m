@@ -10,10 +10,11 @@
 #import "TAPeristentStack+TAAppDelegate.h"
 #import "TATask.h"
 #import "NSManagedObject+TAManagedObject.h"
+#import "NSManagedObjectContext+TAManagedObjectContext.h"
 
 NSString *const TATAListViewControllerCellId = @"TATAListViewControllerCellId";
 
-@interface TAListViewController () <UISearchBarDelegate>
+@interface TAListViewController () <UISearchBarDelegate, UITableViewDelegate>
 
 @property(nonatomic, strong, readwrite) UITableView *tableView;
 @property(nonatomic, strong, readwrite) DBDatastore *store;
@@ -54,9 +55,11 @@ NSString *const TATAListViewControllerCellId = @"TATAListViewControllerCellId";
                                                                       TATask *task = model;
                                                                       cell.textLabel.text = task.name;
                                                                       cell.textLabel.textColor = task.deleted ? [UIColor grayColor] : [UIColor blackColor];
+                                                                      cell.textLabel.textColor = task.completed ? [UIColor grayColor] : [UIColor blackColor];
                                                                   }];
 
     self.tableView.dataSource = self.dataSource;
+    self.tableView.delegate = self;
 
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:[TATask entityName]];
     //fetchRequest.predicate = [NSPredicate predicateWithFormat:@"deleted = NO"];
@@ -96,6 +99,14 @@ NSString *const TATAListViewControllerCellId = @"TATAListViewControllerCellId";
 
 #pragma mark 
 #pragma mark - Protocols
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    TATask *task = [self.dataSource objectAtIndexPath:indexPath];
+    task.completed = !task.completed;
+    [self.context saveContext];
+}
+
 
 #pragma mark - UISearchBarDelegate
 
